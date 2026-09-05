@@ -1,0 +1,64 @@
+@media (min-width: 700px) {
+  .site-header { 
+    padding: 1.25rem 4rem; 
+  }
+
+  .menu-button { 
+    display: none; 
+  }
+
+  .site-navigation { 
+    align-items: center; 
+    background: transparent; 
+    display: flex; 
+    gap: 2rem; 
+    padding: 0; 
+    position: static; 
+  }
+
+  .site-navigation a { 
+    font-family: Arial, sans-serif; 
+    font-size: .75rem; 
+    text-transform: uppercase; 
+  }
+
+  .hero { 
+    padding: 7rem 8vw 8rem; 
+  }
+
+  .about-section, 
+  .courses-section { 
+    padding: 5rem 8vw; 
+  }
+
+  .about-section { 
+    grid-template-columns: 1.5fr 1fr; 
+    align-items: center;
+  }
+
+  
+  .student-photo img { 
+    width: 100%;
+    max-width: 100%;
+    height: auto; 
+    max-height: 380px;
+    object-fit: cover;
+  }
+
+  .course-list { 
+    grid-template-columns: repeat(2, minmax(0, 1fr)); 
+  }
+
+  
+  .site-footer { 
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    gap: .75rem;
+    padding: 3rem 4rem; 
+  }
+
+  .site-footer p {
+    justify-content: center;
+  }
+}
