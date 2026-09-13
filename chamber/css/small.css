@@ -87,6 +87,8 @@ p {
   overflow: hidden;
   clip: rect(0 0 0 0);
   white-space: nowrap;
+  color: transparent;
+  background: transparent;
 }
 
 /* -----------------------------------------------------------
@@ -234,7 +236,8 @@ p {
    Page intro / toolbar
 ----------------------------------------------------------- */
 .page-intro {
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  background-color: var(--color-primary-dark);
+  background-image: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
   color: #fff;
   padding: 2.2rem 1rem 2.6rem;
 }
@@ -249,13 +252,13 @@ p {
 }
 
 .page-intro h1 {
-  color: #fff;
+  color: #ffffff;
   font-size: clamp(2rem, 5vw, 3.2rem);
   margin-bottom: 0.5rem;
 }
 
 .page-intro p {
-  color: rgba(224, 190, 116, 0.9);
+  color: #ffffff;
   max-width: 60ch;
   margin-bottom: 0;
 }
@@ -297,8 +300,9 @@ p {
 }
 
 .view-toggle button.active {
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
-  color: #fff;
+  background-color: var(--color-primary-dark);
+  background-image: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  color: #ffffff;
 }
 
 .view-toggle button:hover,
@@ -337,8 +341,12 @@ main {
   color: var(--color-primary);
 }
 
+.page-intro .eyebrow.dark {
+  color: rgba(255, 255, 255, 0.96);
+}
+
 .eyebrow.dark {
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--color-primary-dark);
 }
 
 .hero-actions {
@@ -567,7 +575,8 @@ main {
 
 .cta-band {
   margin-top: 4rem;
-  background: linear-gradient(135deg, #f6ead4 0%, #e8f0ff 100%);
+  background-color: #f6ead4;
+  background-image: linear-gradient(135deg, #f6ead4 0%, #e8f0ff 100%);
   border: 1px solid rgba(27, 59, 95, 0.08);
   border-radius: 28px;
   padding: 1.8rem 1.3rem;
