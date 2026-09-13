@@ -3,26 +3,233 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Fredrick Oketcho's Chamber of Commerce project for WDD 231.">
+  <meta name="description" content="Kampala Chamber of Commerce — a community-led business network helping local companies grow and connect.">
   <meta name="author" content="Fredrick Oketcho">
-  <title>Chamber Project | WDD 231</title>
-  <link rel="stylesheet" href="../styles/small.css">
-  <link rel="stylesheet" href="../styles/larger.css">
+  <title>Kampala Chamber | Business Growth Network</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/small.css">
+  <link rel="stylesheet" href="css/larger.css">
+  <script src="../scripts/navigation.js" defer></script>
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="../index.html" aria-label="WDD 231 home">
-      <img src="../images/logo.svg" alt="" width="40" height="40">
-      <span>Fredrick Oketcho</span>
-    </a>
+    <div class="site-header__bar">
+      <a class="brand" href="index.html" aria-label="Kampala Chamber home">
+        <img src="images/favicon.png" alt="" width="40" height="40">
+        <span class="brand__text">
+          <span class="brand__name">Kampala Chamber</span>
+          <span class="brand__place">of Commerce &middot; Uganda</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="primary-nav">
+        <span class="nav-toggle__bars"></span>
+        <span class="visually-hidden">Menu</span>
+      </button>
+
+      <nav class="primary-nav" id="primary-nav">
+        <ul>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="directory.html">Directory</a></li>
+          <li><a href="#highlights">Highlights</a></li>
+          <li><a href="#join">Join</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
-  <main>
-    <section class="hero" aria-labelledby="page-title">
-      <p class="eyebrow">WDD 231 project</p>
-      <h1 id="page-title">Chamber Project</h1>
-      <p class="hero-copy">The Chamber of Commerce project will be developed here during the upcoming weeks.</p>
-      <a class="primary-link" href="../index.html">Return home <span aria-hidden="true">&#8594;</span></a>
+
+  <main class="chamber-home">
+    <section class="page-intro">
+      <div class="page-intro__inner">
+        <p class="eyebrow">Business growth network</p>
+        <h1>Grow your business with Kampala’s strongest local network.</h1>
+        <p>We connect entrepreneurs, service providers, and growing companies with the relationships, visibility, and momentum they need to thrive in Uganda’s capital.</p>
+        <div class="hero-actions">
+          <a class="primary-cta" href="#join">Become a member</a>
+          <a class="secondary-cta" href="directory.html">Explore members</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="impact-strip" aria-label="Chamber impact statistics">
+      <div class="stat-card">
+        <strong>180+</strong>
+        <span>Business members</span>
+      </div>
+      <div class="stat-card">
+        <strong>35</strong>
+        <span>Networking events</span>
+      </div>
+      <div class="stat-card">
+        <strong>12</strong>
+        <span>Industry partners</span>
+      </div>
+      <div class="stat-card">
+        <strong>4.9/5</strong>
+        <span>Member satisfaction</span>
+      </div>
+    </section>
+
+    <section class="feature-section" id="highlights">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Why join</p>
+          <h2>Support that moves local business forward.</h2>
+        </div>
+      </div>
+
+      <div class="feature-grid">
+        <article class="feature-card">
+          <div class="feature-icon">01</div>
+          <h3>Business visibility</h3>
+          <p>Reach better customers and stronger partners through trusted local promotion and community recognition.</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon">02</div>
+          <h3>Meaningful networking</h3>
+          <p>Meet founders, vendors, and institutions that open doors to new opportunities and collaborations.</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon">03</div>
+          <h3>Market insight</h3>
+          <p>Stay informed with events, workshops, and guidance that help your business understand demand and growth.</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon">04</div>
+          <h3>Community trust</h3>
+          <p>Build reputation through a credible chamber network known for quality, professionalism, and service.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="split-section">
+      <div class="section-copy">
+        <p class="eyebrow">About the chamber</p>
+        <h2>Kampala’s chamber for opportunity and trust.</h2>
+        <p>The Kampala Chamber of Commerce is built to help local business leaders connect with the people, institutions, and ideas that keep trade and growth moving.</p>
+        <ul class="check-list">
+          <li>Networking events and business roundtables</li>
+          <li>Directory access for member discovery and referrals</li>
+          <li>Support for startups, SMEs, and established companies</li>
+          <li>Regional visibility and stronger local partnerships</li>
+        </ul>
+      </div>
+
+      <aside class="info-panel" aria-label="Upcoming chamber events">
+        <h3>Upcoming highlights</h3>
+        <div class="mini-event">
+          <span class="event-date">18 Sep</span>
+          <div>
+            <h4>Investor Breakfast</h4>
+            <p>Meet founders and financing partners in the city.</p>
+          </div>
+        </div>
+        <div class="mini-event">
+          <span class="event-date">25 Sep</span>
+          <div>
+            <h4>Startup Showcase</h4>
+            <p>Spotlight on innovative local businesses and product teams.</p>
+          </div>
+        </div>
+        <div class="mini-event">
+          <span class="event-date">05 Oct</span>
+          <div>
+            <h4>Women in Business Forum</h4>
+            <p>Mentorship and networking for confident growth.</p>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="member-showcase">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Featured members</p>
+          <h2>Businesses building Kampala.</h2>
+        </div>
+        <a class="text-link" href="directory.html">Browse all members</a>
+      </div>
+
+      <div class="spotlight-grid">
+        <article class="spotlight-card">
+          <span class="spotlight-tag">Hospitality</span>
+          <h3>Nile Breeze Coffee</h3>
+          <p>Roasted daily for cafés, offices, and hospitality partners across Kampala.</p>
+        </article>
+
+        <article class="spotlight-card">
+          <span class="spotlight-tag">Technology</span>
+          <h3>Kampala Tech Hub</h3>
+          <p>Startup incubator and coworking space supporting emerging digital businesses.</p>
+        </article>
+
+        <article class="spotlight-card">
+          <span class="spotlight-tag">Logistics</span>
+          <h3>Lakeside Logistics</h3>
+          <p>Freight and supply chain support helping local companies move faster and farther.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="cta-band" id="join">
+      <div>
+        <p class="eyebrow dark">Join now</p>
+        <h2>Ready to grow in Kampala?</h2>
+      </div>
+      <p>Become part of a chamber that helps businesses connect, thrive, and be recognized.</p>
+      <a class="primary-cta" href="directory.html">Join the chamber</a>
     </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div>
+        <h2>Kampala Chamber of Commerce</h2>
+        <address>
+          17 Kampala Road<br>
+          Kampala, Uganda<br>
+          <a href="tel:+256701986835">+256 701 986 835</a><br>
+          <a href="mailto:fredrickoketcho5@gmail.com">fredrickoketcho5@gmail.com</a>
+        </address>
+      </div>
+
+      <div>
+        <h2>Connect</h2>
+        <div class="social-links">
+          <a href="https://github.com/FredrickOketcho/-wdd231" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg viewBox="0 0 24 24"><path d="M12 .5A12 12 0 0 0 8.2 23.8c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.4-4-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.8.1-.8.1-.8 1.2.1 1.9 1.3 1.9 1.3 1.1 1.9 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.8 0-1.3.5-2.4 1.3-3.2-.1-.3-.6-1.5.1-3.2 0 0 1.1-.4 3.4 1.2A11.5 11.5 0 0 1 12 6.8c1.1 0 2.3.2 3.3.5 2.3-1.6 3.4-1.2 3.4-1.2.7 1.7.2 2.9.1 3.2.8.8 1.3 1.9 1.3 3.2 0 4.5-2.8 5.5-5.5 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24"><path d="M6.94 8.5A1.56 1.56 0 1 1 6.9 5.4a1.56 1.56 0 0 1 .04 3.1ZM5.5 9.8h2.8V19H5.5V9.8Zm4.7 0h2.7v1.3h.1c.4-.7 1.3-1.5 2.8-1.5 3 0 3.5 2 3.5 4.5V19h-2.8v-17.6c0-1.1-.1-2.5-1.5-2.5-1.5 0-1.7 1.2-1.7 2.5V19h-2.8V9.8Z"/></svg>
+          </a>
+          <a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube">
+            <svg viewBox="0 0 24 24"><path d="M23.5 7.2a3 3 0 0 0-2.1-2.1C19.4 4.7 12 4.7 12 4.7s-7.4 0-9.4.4A3 3 0 0 0 .5 7.2 31.5 31.5 0 0 0 0 12a31.5 31.5 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c2 .4 9.4.4 9.4.4s7.4 0 9.4-.4a3 3 0 0 0 2.1-2.1A31.5 31.5 0 0 0 24 12a31.5 31.5 0 0 0-.5-4.8ZM9.8 15.5v-7l6.3 3.5-6.3 3.5Z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h2>Quick links</h2>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="directory.html">Business directory</a></li>
+          <li><a href="#highlights">Member benefits</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="site-footer__bottom">
+      <p>&copy; <span id="current-year"></span> Kampala Chamber of Commerce</p>
+      <p>Last updated: <span id="last-modified"></span></p>
+    </div>
+  </footer>
+
+  <script src="js/directory.js"></script>
 </body>
 </html>

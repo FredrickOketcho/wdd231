@@ -7,28 +7,43 @@ const courses = [
   { subject: 'WDD', number: 231, title: 'Web Frontend Development I', credits: 3, completed: false }
 ];
 
-const courseList = document.querySelector('#course-list');
-const creditCount = document.querySelector('#credit-count');
-const filterButtons = document.querySelectorAll('[data-filter]');
+document.addEventListener("DOMContentLoaded", () => {
+  const courseList = document.querySelector("#course-list");
+  const creditCount = document.querySelector("#credit-count");
+  const filterButtons = document.querySelectorAll(".filter-button");
 
-function renderCourses(filter = 'all') {
-  const visibleCourses = filter === 'all' ? courses : courses.filter((course) => course.subject === filter);
-  courseList.innerHTML = visibleCourses.map((course) => `
-    <article class="course-card ${course.completed ? 'completed' : ''}">
-      <h3>${course.subject} ${course.number} &mdash; ${course.title}</h3>
-      <p class="course-meta">${course.credits} credits</p>
-      <p class="course-status">${course.completed ? 'Completed' : 'Required course'}</p>
-    </article>
-  `).join('');
-  creditCount.textContent = visibleCourses.reduce((total, course) => total + course.credits, 0);
-}
+  function displayCourses(filteredCourses) {
+    courseList.innerHTML = "";
+    
+    filteredCourses.forEach(course => {
+      const card = document.createElement("div");
+      card.className = `course-card ${course.completed ? 'completed' : ''}`;
+      card.innerHTML = `
+        <h3>${course.subject} ${course.number}</h3>
+        <p>${course.title}</p>
+        <p><strong>${course.credits}</strong> credits</p>
+      `;
+      courseList.appendChild(card);
+    });
 
-filterButtons.forEach((button) => {
-  button.addEventListener('click', () => {
-    filterButtons.forEach((filterButton) => filterButton.classList.remove('active'));
-    button.classList.add('active');
-    renderCourses(button.dataset.filter);
+    const totalCredits = filteredCourses.reduce((sum, c) => sum + c.credits, 0);
+    creditCount.textContent = totalCredits;
+  }
+
+  filterButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      filterButtons.forEach(btn => btn.classList.remove("active"));
+      button.classList.add("active");
+
+      const filter = button.getAttribute("data-filter");
+      if (filter === "all") {
+        displayCourses(courses);
+      } else {
+        displayCourses(courses.filter(c => c.subject === filter));
+      }
+    });
   });
-});
 
-renderCourses();
+  // Initial load
+  displayCourses(courses);
+});

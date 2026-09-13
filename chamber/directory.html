@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Business Directory | Kampala Chamber of Commerce</title>
+  <meta name="description" content="Browse member businesses of the Kampala Chamber of Commerce, a directory of local companies in coffee, technology, crafts, logistics, wellness, agriculture, media, and law." />
+  <meta name="author" content="Fredrick Oketcho" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Business Directory | Kampala Chamber of Commerce" />
+  <meta property="og:description" content="Browse member businesses of the Kampala Chamber of Commerce, a directory of local companies serving Kampala, Uganda." />
+  <meta property="og:image" content="https://FredrickOketcho.github.io/wdd231/chamber/images/social-share.png" />
+  <meta property="og:url" content="https://FredrickOketcho.github.io/wdd231/chamber/directory.html" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon-32.png" />
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- CSS: normalize first, then mobile-first small.css, then larger.css -->
+  <link rel="stylesheet" href="css/normalize.css" />
+  <link rel="stylesheet" href="css/small.css" />
+  <link rel="stylesheet" href="css/larger.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="site-header__bar">
+      <a class="brand" href="index.html" aria-label="Kampala Chamber home">
+        <img src="images/favicon.png" alt="Kampala Chamber of Commerce crest" />
+        <span class="brand__text">
+          <span class="brand__name">Kampala Chamber</span>
+          <span class="brand__place">of Commerce &middot; Uganda</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="primary-nav">
+        <span class="nav-toggle__bars"></span>
+        <span class="visually-hidden">Menu</span>
+      </button>
+
+      <nav class="primary-nav" id="primary-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="directory.html" aria-current="page">Directory</a></li>
+          <li><a href="index.html#highlights">Highlights</a></li>
+          <li><a href="index.html#join">Join</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-intro page-intro--directory">
+    <div class="page-intro__inner">
+      <p class="eyebrow dark">Member directory</p>
+      <h1>Member Business Directory</h1>
+      <p>Explore the companies and organizations that make up the Kampala Chamber of Commerce, from neighborhood cafes to logistics firms serving the whole region.</p>
+    </div>
+  </section>
+
+  <div class="directory-toolbar">
+    <div class="view-toggle" role="group" aria-label="Choose directory view">
+      <button id="grid-view-btn" class="active" type="button" aria-pressed="true">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3h8v8H3V3zm10 0h8v8h-8V3zM3 13h8v8H3v-8zm10 0h8v8h-8v-8z"/></svg>
+        Grid
+      </button>
+      <button id="list-view-btn" type="button" aria-pressed="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v2H4V5zm0 6h16v2H4v-2zm0 6h16v2H4v-2z"/></svg>
+        List
+      </button>
+    </div>
+  </div>
+
+  <main>
+    <p id="member-status" role="status">Loading member directory&hellip;</p>
+    <div id="member-list"></div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div>
+        <h2>Kampala Chamber of Commerce</h2>
+        <address>
+          17 Kampala Road<br />
+          Kampala, Uganda<br />
+          <a href="tel:+256701986835">+256 701 986 835</a><br />
+          <a href="mailto:fredrickoketcho5@gmail.com">fredrickoketcho5@gmail.com</a>
+        </address>
+      </div>
+
+      <div>
+        <h2>Connect</h2>
+        <div class="social-links">
+          <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg>
+          </a>
+          <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter / X">
+            <svg viewBox="0 0 24 24"><path d="M18.9 3H21l-6.6 7.5L22 21h-6.6l-4.6-6-5.3 6H3l7.1-8L2.6 3h6.8l4.2 5.5L18.9 3z"/></svg>
+          </a>
+          <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24"><path d="M12 2c2.7 0 3.1 0 4.1.1 1.1 0 1.9.2 2.5.5.7.3 1.2.6 1.7 1.1.5.5.9 1 1.1 1.7.2.6.4 1.4.5 2.5.1 1 .1 1.4.1 4.1s0 3.1-.1 4.1c0 1.1-.2 1.9-.5 2.5-.3.7-.6 1.2-1.1 1.7-.5.5-1 .9-1.7 1.1-.6.2-1.4.4-2.5.5-1 .1-1.4.1-4.1.1s-3.1 0-4.1-.1c-1.1 0-1.9-.2-2.5-.5-.7-.3-1.2-.6-1.7-1.1-.5-.5-.9-1-1.1-1.7-.2-.6-.4-1.4-.5-2.5C2 15.1 2 14.7 2 12s0-3.1.1-4.1c0-1.1.2-1.9.5-2.5.3-.7.6-1.2 1.1-1.7.5-.5 1-.9 1.7-1.1.6-.2 1.4-.4 2.5-.5C8.9 2 9.3 2 12 2zm0 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4zm5.2-8.4a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h2>Quick Links</h2>
+        <ul>
+          <li><a href="index.html#highlights">Membership benefits</a></li>
+          <li><a href="index.html#join">Join the chamber</a></li>
+          <li><a href="directory.html">Business directory</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="site-footer__bottom">
+      <p>&copy; <span id="current-year"></span> Kampala Chamber of Commerce &mdash; Fredrick Oketcho, WDD 231</p>
+      <p>Last updated: <span id="last-modified"></span></p>
+    </div>
+  </footer>
+
+  <script src="js/directory.js"></script>
+</body>
+</html>

@@ -1,64 +1,70 @@
 @media (min-width: 700px) {
-  .site-header { 
-    padding: 1.25rem 4rem; 
+  .site-header {
+    padding: 1rem 4rem;
   }
 
-  .menu-button { 
-    display: none; 
+  .menu-button {
+    display: none;
   }
 
-  .site-navigation { 
-    align-items: center; 
-    background: transparent; 
-    display: flex; 
-    gap: 2rem; 
-    padding: 0; 
-    position: static; 
-  }
-
-  .site-navigation a { 
-    font-family: Arial, sans-serif; 
-    font-size: .75rem; 
-    text-transform: uppercase; 
-  }
-
-  .hero { 
-    padding: 7rem 8vw 8rem; 
-  }
-
-  .about-section, 
-  .courses-section { 
-    padding: 5rem 8vw; 
-  }
-
-  .about-section { 
-    grid-template-columns: 1.5fr 1fr; 
+  .site-navigation {
+    position: static;
+    display: flex !important;
+    flex-direction: row;
     align-items: center;
+    gap: 0.4rem;
+    width: auto;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    overflow: visible;
   }
 
-  
-  .student-photo img { 
-    width: 100%;
-    max-width: 100%;
-    height: auto; 
-    max-height: 380px;
-    object-fit: cover;
+  .site-navigation a {
+    padding: 0.75rem 0.9rem;
+    border-radius: 999px;
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
   }
 
-  .course-list { 
-    grid-template-columns: repeat(2, minmax(0, 1fr)); 
+  .site-navigation a:hover,
+  .site-navigation a:focus-visible,
+  .site-navigation a.active {
+    background: rgba(77, 179, 255, 0.14);
   }
 
-  
-  .site-footer { 
-    flex-direction: column;
-    align-items: center; 
-    justify-content: center;
-    gap: .75rem;
-    padding: 3rem 4rem; 
+  .hero {
+    padding: 5rem 0 4rem;
   }
 
-  .site-footer p {
-    justify-content: center;
+  .about-section,
+  .courses-section {
+    padding: 2.5rem 0 4rem;
+  }
+
+  .about-section {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  .about-copy {
+    margin-bottom: 0;
+  }
+
+  .student-photo img {
+    height: 380px;
+  }
+
+  .course-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .site-footer {
+    padding: 2.5rem 4rem 3rem;
   }
 }

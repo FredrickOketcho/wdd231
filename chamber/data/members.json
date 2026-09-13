@@ -1,0 +1,84 @@
+{
+  "members": [
+    {
+      "name": "Nile Breeze Coffee Roasters",
+      "address": "14 Buganda Road, Kampala",
+      "phone": "+256 414 233 018",
+      "url": "https://www.nilebreezecoffee.example.com",
+      "image": "nile-breeze-coffee.jpg",
+      "membership": 3,
+      "founded": 2015,
+      "tagline": "Small-batch Arabica roasted daily from the slopes of Mt. Elgon."
+    },
+    {
+      "name": "Kampala Tech Hub",
+      "address": "Innovation Village, Ntinda Road, Kampala",
+      "phone": "+256 312 260 445",
+      "url": "https://www.kampalatechhub.example.com",
+      "image": "kampala-tech-hub.jpg",
+      "membership": 3,
+      "founded": 2018,
+      "tagline": "Co-working space and startup accelerator for Kampala's tech scene."
+    },
+    {
+      "name": "Buganda Crafts Cooperative",
+      "address": "22 Kabaka Anjagala Road, Mengo, Kampala",
+      "phone": "+256 772 501 887",
+      "url": "https://www.bugandacrafts.example.com",
+      "image": "buganda-crafts.jpg",
+      "membership": 2,
+      "founded": 2009,
+      "tagline": "Handwoven baskets, barkcloth art, and beadwork from local artisans."
+    },
+    {
+      "name": "Lakeside Logistics Ltd",
+      "address": "8 Jinja Road Industrial Area, Kampala",
+      "phone": "+256 414 667 320",
+      "url": "https://www.lakesidelogistics.example.com",
+      "image": "lakeside-logistics.jpg",
+      "membership": 2,
+      "founded": 2011,
+      "tagline": "Freight, warehousing, and last-mile delivery across the Great Lakes region."
+    },
+    {
+      "name": "Kololo Wellness Spa",
+      "address": "5 Acacia Avenue, Kololo, Kampala",
+      "phone": "+256 700 442 019",
+      "url": "https://www.kololowellness.example.com",
+      "image": "kololo-wellness.jpg",
+      "membership": 1,
+      "founded": 2020,
+      "tagline": "Massage therapy, sauna, and wellness treatments in a quiet garden setting."
+    },
+    {
+      "name": "Green Hill Organic Farms",
+      "address": "Plot 3 Entebbe Road, Wakiso",
+      "phone": "+256 782 913 456",
+      "url": "https://www.greenhillorganics.example.com",
+      "image": "green-hill-organics.jpg",
+      "membership": 1,
+      "founded": 2016,
+      "tagline": "Certified organic vegetables and fruit supplied fresh to Kampala markets."
+    },
+    {
+      "name": "Ssese Media Group",
+      "address": "44 Kira Road, Kamwokya, Kampala",
+      "phone": "+256 393 202 771",
+      "url": "https://www.ssesemedia.example.com",
+      "image": "ssese-media-group.jpg",
+      "membership": 2,
+      "founded": 2013,
+      "tagline": "Video production, branding, and digital advertising for local businesses."
+    },
+    {
+      "name": "Capital City Law Chambers",
+      "address": "17 Kampala Road, Kampala",
+      "phone": "+256 414 344 902",
+      "url": "https://www.capitalcitylaw.example.com",
+      "image": "capital-city-law.jpg",
+      "membership": 3,
+      "founded": 2005,
+      "tagline": "Corporate, land, and commercial law services for growing enterprises."
+    }
+  ]
+}
