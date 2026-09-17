@@ -13,6 +13,10 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .hero-image {
+    height: 430px;
+  }
+
   #member-list {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -23,6 +27,20 @@
 }
 
 @media screen and (min-width: 800px) {
+  .home-layout {
+    grid-template-columns: 1.6fr 0.8fr;
+    align-items: start;
+  }
+
+  .weather-panel {
+    position: sticky;
+    top: 100px;
+  }
+
+  .weather-summary {
+    align-items: flex-start;
+  }
+
   .nav-toggle {
     display: none;
   }
