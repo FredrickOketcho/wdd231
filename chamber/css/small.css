@@ -515,6 +515,7 @@ main {
 .cta-band .primary-cta {
   background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
   color: #ffffff;
+  box-shadow: 0 16px 28px rgba(18, 40, 63, 0.18);
 }
 
 .text-link {
@@ -612,8 +613,8 @@ main {
   width: 44px;
   height: 44px;
   border-radius: 12px;
-  background: rgba(18, 40, 63, 0.08);
-  color: var(--color-primary-dark);
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  color: #ffffff;
   font-size: 0.75rem;
   font-weight: 700;
   margin-bottom: 0.9rem;
