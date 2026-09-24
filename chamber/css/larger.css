@@ -27,6 +27,13 @@
 }
 
 @media screen and (min-width: 800px) {
+  .hero-overlay {
+    left: 2rem;
+    right: auto;
+    bottom: 2rem;
+    max-width: 420px;
+  }
+
   .home-layout {
     grid-template-columns: 1.6fr 0.8fr;
     align-items: start;
