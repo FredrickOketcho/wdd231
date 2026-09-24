@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You | Kampala Chamber of Commerce</title>
+  <meta name="description" content="Thank you for applying to join the Kampala Chamber of Commerce.">
+  <meta name="author" content="Fredrick Oketcho">
+  <meta property="og:title" content="Thank you for joining the Kampala Chamber">
+  <meta property="og:description" content="Your Kampala Chamber membership application has been received.">
+  <meta property="og:image" content="https://FredrickOketcho.github.io/wdd231/chamber/images/social-share.png">
+  <meta property="og:url" content="https://FredrickOketcho.github.io/wdd231/chamber/thankyou.html">
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/small.css">
+  <link rel="stylesheet" href="css/larger.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header__bar">
+      <a class="brand" href="index.html" aria-label="Kampala Chamber home">
+        <img src="images/favicon.png" alt="Kampala Chamber of Commerce crest" width="40" height="40">
+        <span class="brand__text">
+          <span class="brand__name">Kampala Chamber</span>
+          <span class="brand__place">of Commerce &middot; Uganda</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="primary-nav">
+        <span class="nav-toggle__bars"></span>
+        <span class="visually-hidden">Menu</span>
+      </button>
+
+      <nav class="primary-nav" id="primary-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="directory.html">Directory</a></li>
+          <li><a href="index.html#highlights">Highlights</a></li>
+          <li><a href="join.html">Join</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="chamber-page chamber-thankyou">
+    <section class="page-intro">
+      <div class="page-intro__inner">
+        <p class="eyebrow">Application received</p>
+        <h1>Thank you for joining!</h1>
+        <p>We have received your chamber membership application and will contact you soon.</p>
+      </div>
+    </section>
+
+    <section class="thankyou-summary">
+      <h2>Application details</h2>
+      <dl class="summary-list">
+        <div>
+          <dt>First name</dt>
+          <dd id="firstNameDisplay">—</dd>
+        </div>
+
+        <div>
+          <dt>Last name</dt>
+          <dd id="lastNameDisplay">—</dd>
+        </div>
+
+        <div>
+          <dt>Email</dt>
+          <dd id="emailDisplay">—</dd>
+        </div>
+
+        <div>
+          <dt>Phone</dt>
+          <dd id="phoneDisplay">—</dd>
+        </div>
+
+        <div>
+          <dt>Business / Organization</dt>
+          <dd id="organizationDisplay">—</dd>
+        </div>
+
+        <div>
+          <dt>Submitted</dt>
+          <dd id="timestampDisplay">—</dd>
+        </div>
+      </dl>
+      <a class="primary-cta" href="index.html">Return home</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div>
+        <h2>Kampala Chamber of Commerce</h2>
+        <address>
+          17 Kampala Road<br>
+          Kampala, Uganda<br>
+          <a href="tel:+256701986835">+256 701 986 835</a><br>
+          <a href="mailto:fredrickoketcho5@gmail.com">fredrickoketcho5@gmail.com</a>
+        </address>
+      </div>
+
+      <div>
+        <h2>Connect</h2>
+        <div class="social-links">
+          <a href="https://github.com/FredrickOketcho/-wdd231" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg viewBox="0 0 24 24"><path d="M12 .5A12 12 0 0 0 8.2 23.8c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.4-4-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.8.1-.8.1-.8 1.2.1 1.9 1.3 1.9 1.3 1.1 1.9 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.8 0-1.3.5-2.4 1.3-3.2-.1-.3-.6-1.5.1-3.2 0 0 1.1-.4 3.4 1.2A11.5 11.5 0 0 1 12 6.8c1.1 0 2.3.2 3.3.5 2.3-1.6 3.4-1.2 3.4-1.2.7 1.7.2 2.9.1 3.2.8.8 1.3 1.9 1.3 3.2 0 4.5-2.8 5.5-5.5 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24"><path d="M6.94 8.5A1.56 1.56 0 1 1 6.9 5.4a1.56 1.56 0 0 1 .04 3.1ZM5.5 9.8h2.8V19H5.5V9.8Zm4.7 0h2.7v1.3h.1c.4-.7 1.3-1.5 2.8-1.5 3 0 3.5 2 3.5 4.5V19h-2.8v-17.6c0-1.1-.1-2.5-1.5-2.5-1.5 0-1.7 1.2-1.7 2.5V19h-2.8V9.8Z"/></svg>
+          </a>
+          <a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube">
+            <svg viewBox="0 0 24 24"><path d="M23.5 7.2a3 3 0 0 0-2.1-2.1C19.4 4.7 12 4.7 12 4.7s-7.4 0-9.4.4A3 3 0 0 0 .5 7.2 31.5 31.5 0 0 0 0 12a31.5 31.5 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c2 .4 9.4.4 9.4.4s7.4 0 9.4-.4a3 3 0 0 0 2.1-2.1A31.5 31.5 0 0 0 24 12a31.5 31.5 0 0 0-.5-4.8ZM9.8 15.5v-7l6.3 3.5-6.3 3.5Z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h2>Quick links</h2>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="directory.html">Directory</a></li>
+          <li><a href="join.html">Join</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="site-footer__bottom">
+      <p>&copy; <span id="current-year"></span> Kampala Chamber of Commerce</p>
+      <p>Last updated: <span id="last-modified"></span></p>
+    </div>
+  </footer>
+
+  <script src="js/thankyou.js" defer></script>
+</body>
+</html>
