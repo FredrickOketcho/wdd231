@@ -3,26 +3,100 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Fredrick Oketcho's final WDD 231 project.">
+  <meta name="description" content="Explore Kampala taxi and express routes, compare estimated fares, and save useful journeys.">
   <meta name="author" content="Fredrick Oketcho">
-  <title>Final Project | WDD 231</title>
-  <link rel="stylesheet" href="../styles/small.css">
-  <link rel="stylesheet" href="../styles/larger.css">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Kampala Fare Guide | Local Transport Explorer">
+  <meta property="og:description" content="Find Kampala taxi and express routes and compare indicative fares.">
+  <meta property="og:image" content="https://fredrickoketcho.github.io/-wdd231/final/assets/og-image.jpg">
+  <meta property="og:url" content="https://fredrickoketcho.github.io/-wdd231/final/">
+  <title>Kampala Fare Guide | Local Transport Explorer</title>
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link rel="stylesheet" href="css/site.css">
+  <script type="module" src="js/home.js"></script>
+  <script type="module" src="js/site.js"></script>
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <header class="site-header">
-    <a class="brand" href="../index.html" aria-label="WDD 231 home">
-      <img src="../images/logo.svg" alt="" width="40" height="40">
-      <span>Fredrick Oketcho</span>
-    </a>
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="Kampala Fare Guide home">
+        <img src="assets/favicon.png" alt="" width="38" height="38">
+        <span>Kampala <strong>Fare Guide</strong></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-navigation">
+        <span aria-hidden="true">&#9776;</span>
+      </button>
+      <nav class="primary-navigation" id="primary-navigation" aria-label="Main navigation">
+        <a href="index.html" aria-current="page">Explore</a>
+        <a href="routes.html">All routes</a>
+        <a href="fare.html">Fare request</a>
+      </nav>
+    </div>
   </header>
-  <main>
-    <section class="hero" aria-labelledby="page-title">
-      <p class="eyebrow">WDD 231 project</p>
-      <h1 id="page-title">Final Project</h1>
-      <p class="hero-copy">The final project will be developed here during the upcoming weeks.</p>
-      <a class="primary-link" href="../index.html">Return home <span aria-hidden="true">&#8594;</span></a>
+  <main id="main-content">
+    <section class="hero home-hero" aria-labelledby="page-title">
+      <img class="hero-image" src="assets/express-route.jpg" alt="Traffic moving along a divided expressway near Kampala" width="712" height="400" fetchpriority="high">
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <p class="eyebrow light-eyebrow">A simpler way around the city</p>
+        <h1 id="page-title">Know your route.<br><span>Know your fare.</span></h1>
+        <p>Explore everyday taxi and express journeys across Kampala, with clear route details and indicative fares in Ugandan shillings.</p>
+        <a class="button button-light" href="routes.html">Browse all routes <span aria-hidden="true">&#8599;</span></a>
+      </div>
+      <p class="hero-caption">Kampala to Entebbe Expressway</p>
     </section>
+    <section class="section route-explorer" aria-labelledby="explore-title">
+      <div class="section-heading">
+        <div><p class="eyebrow">Find a journey</p><h2 id="explore-title">Routes at a glance</h2></div>
+        <a class="text-link" href="routes.html">View route directory <span aria-hidden="true">&#8594;</span></a>
+      </div>
+      <div class="route-tools">
+        <label class="search-field" for="route-search"><span class="sr-only">Search routes by place or route name</span><span aria-hidden="true">&#9906;</span><input id="route-search" type="search" placeholder="Search a place or route" autocomplete="off"></label>
+        <div class="filter-controls" role="group" aria-label="Filter routes">
+          <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">All routes</button>
+          <button class="filter-button" type="button" data-filter="Taxi" aria-pressed="false">Taxi</button>
+          <button class="filter-button" type="button" data-filter="Express" aria-pressed="false">Express</button>
+          <button class="filter-button favorite-filter" type="button" data-filter="favorites" aria-pressed="false">Saved <span aria-hidden="true">&#9733;</span></button>
+        </div>
+      </div>
+      <p class="results-note" id="results-count" aria-live="polite">Loading routes...</p>
+      <div class="route-grid" id="featured-routes" aria-live="polite"></div>
+      <div class="load-error" id="home-error" role="alert" hidden>Routes could not be loaded. Please refresh the page and try again.</div>
+    </section>
+    <section class="fare-promo" aria-labelledby="fare-promo-title">
+      <div class="promo-copy">
+        <p class="eyebrow light-eyebrow">Plan before you board</p>
+        <h2 id="fare-promo-title">A little clarity<br>goes a long way.</h2>
+        <p>Compare route details, check typical operating hours, and send a fare question in one place.</p>
+        <a class="button button-outline" href="fare.html">Estimate a fare <span aria-hidden="true">&#8594;</span></a>
+      </div>
+      <figure class="promo-image"><img src="assets/peak-transit.jpg" alt="Busy Kampala traffic during the evening commute" width="920" height="460" loading="lazy"><figcaption>Busy roads can affect journey times and fares.</figcaption></figure>
+    </section>
+    <p class="fare-disclaimer">Fares shown are project estimates for learning purposes, not official operator prices. Confirm the current fare and departure point before travelling.</p>
   </main>
+  <dialog class="route-dialog" id="route-dialog" aria-labelledby="dialog-title">
+    <div class="dialog-content">
+      <button class="dialog-close" type="button" data-dialog-close aria-label="Close route details">&times;</button>
+      <p class="eyebrow" data-dialog-type></p>
+      <h2 id="dialog-title" data-dialog-title></h2>
+      <p data-dialog-description></p>
+      <dl class="dialog-facts">
+        <div><dt>Indicative fare</dt><dd data-dialog-fare></dd></div>
+        <div><dt>Typical hours</dt><dd data-dialog-hours></dd></div>
+        <div><dt>Peak hours</dt><dd data-dialog-peak></dd></div>
+        <div><dt>Stages</dt><dd data-dialog-stages></dd></div>
+      </dl>
+      <a class="button button-dark" href="fare.html">Ask about this route <span aria-hidden="true">&#8594;</span></a>
+    </div>
+  </dialog>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <a class="footer-brand" href="index.html">Kampala <strong>Fare Guide</strong></a>
+      <p>Independent student project by Fredrick Oketcho<br>WDD 231 | Kampala, Uganda</p>
+      <nav aria-label="Footer navigation"><a href="routes.html">Route directory</a><a href="fare.html">Fare request</a><a href="attributions.html">Attributions</a></nav>
+      <p class="footer-note"><a href="https://www.loom.com/share/0c82bb713053473e8c83a8f7836115d1" target="_blank" rel="noopener noreferrer">Video demonstration</a></p>
+    </div>
+  </footer>
 </body>
 </html>

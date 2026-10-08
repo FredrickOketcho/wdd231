@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Choose a Kampala route, estimate a fare, and send a transport question to the Kampala Fare Guide project.">
+  <meta name="author" content="Fredrick Oketcho">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Fare Request | Kampala Fare Guide">
+  <meta property="og:description" content="Estimate a group fare and send a route question for Kampala transport.">
+  <meta property="og:image" content="https://fredrickoketcho.github.io/-wdd231/final/assets/og-image.jpg">
+  <meta property="og:url" content="https://fredrickoketcho.github.io/-wdd231/final/fare.html">
+  <title>Fare Request | Kampala Fare Guide</title>
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link rel="stylesheet" href="css/site.css">
+  <script type="module" src="js/fare.js"></script>
+  <script type="module" src="js/site.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header"><div class="header-inner">
+    <a class="brand" href="index.html" aria-label="Kampala Fare Guide home"><img src="assets/favicon.png" alt="" width="38" height="38"><span>Kampala <strong>Fare Guide</strong></span></a>
+    <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-navigation"><span aria-hidden="true">&#9776;</span></button>
+    <nav class="primary-navigation" id="primary-navigation" aria-label="Main navigation"><a href="index.html">Explore</a><a href="routes.html">All routes</a><a href="fare.html" aria-current="page">Fare request</a></nav>
+  </div></header>
+  <main id="main-content">
+    <section class="page-heading" aria-labelledby="page-title"><p class="eyebrow">Plan a journey</p><h1 id="page-title">Fare request</h1><p>Choose a route to see an indicative total, then send a question or feedback.</p></section>
+    <section class="form-layout section" aria-label="Fare estimate and contact form">
+      <div class="form-aside"><p class="eyebrow">Quick estimate</p><h2>A clearer start to your trip.</h2><p>Pick a route and passenger count to estimate a total. This is a planning guide, not an operator quote.</p>
+        <div class="estimate-panel" aria-live="polite"><span>Estimated total</span><strong id="estimate-total">Choose a route</strong><small id="estimate-detail">Per passenger estimates are shown in UGX.</small></div>
+        <p class="form-note">Actual fares, stages, and operating times may vary. Confirm details before travel.</p>
+      </div>
+      <form class="request-form" action="thanks.html" method="get">
+        <div class="form-heading"><p class="eyebrow">Send a route question</p><h2>Your details</h2></div>
+        <label for="full-name">Full name <span aria-hidden="true">*</span><input id="full-name" name="name" type="text" autocomplete="name" required minlength="2"></label>
+        <label for="email">Email address <span aria-hidden="true">*</span><input id="email" name="email" type="email" autocomplete="email" required></label>
+        <label for="route-choice">Route <span aria-hidden="true">*</span><select id="route-choice" name="route" required><option value="">Loading route choices...</option></select></label>
+        <label for="passengers">Passengers <span aria-hidden="true">*</span><input id="passengers" name="passengers" type="number" min="1" max="20" value="1" required></label>
+        <label class="full-field" for="message">Question or feedback<textarea id="message" name="message" rows="4" placeholder="What would you like to know?"></textarea></label>
+        <button class="button button-dark full-field" type="submit">Send request <span aria-hidden="true">&#8594;</span></button>
+        <p class="privacy-note full-field">This demonstration form does not send or store your contact details. Submitted fields are displayed on the confirmation page.</p>
+      </form>
+      <p class="load-error full-field" id="fare-error" role="alert" hidden>Route choices could not be loaded. Visit the route directory, or refresh and try again.</p>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="footer-inner"><a class="footer-brand" href="index.html">Kampala <strong>Fare Guide</strong></a><p>Independent student project by Fredrick Oketcho<br>WDD 231 | Kampala, Uganda</p><nav aria-label="Footer navigation"><a href="routes.html">Route directory</a><a href="fare.html">Fare request</a><a href="attributions.html">Attributions</a></nav><p class="footer-note"><a href="https://www.loom.com/share/0c82bb713053473e8c83a8f7836115d1" target="_blank" rel="noopener noreferrer">Video demonstration</a></p></div></footer>
+</body>
+</html>
