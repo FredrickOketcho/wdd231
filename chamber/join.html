@@ -1,242 +1,204 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Join | Kampala Chamber of Commerce</title>
-  <meta name="description" content="Apply to join the Kampala Chamber of Commerce and grow your business through networking, visibility, and community support.">
+  <meta name="description" content="Explore membership levels, compare chamber benefits, and apply to join local Kansanga businesses through the Kampala Chamber of Commerce.">
   <meta name="author" content="Fredrick Oketcho">
-  <meta property="og:title" content="Join the Kampala Chamber">
-  <meta property="og:description" content="Apply for membership in the Kampala Chamber of Commerce and connect with local business leaders.">
-  <meta property="og:image" content="https://FredrickOketcho.github.io/wdd231/chamber/images/social-share.png">
-  <meta property="og:url" content="https://FredrickOketcho.github.io/wdd231/chamber/join.html">
-  <link rel="icon" href="images/favicon.png" type="image/png">
+  <meta property="og:title" content="Join the Kampala Chamber of Commerce Today">
+  <meta property="og:description" content="Explore membership levels, compare chamber benefits, and apply to join Kansanga's local business community. Find the right plan for your organization.">
+  <meta property="og:image" content="https://fredrickoketcho.github.io/-wdd231/chamber/images/kampala-share.png">
+  <meta property="og:url" content="https://fredrickoketcho.github.io/-wdd231/chamber/join.html">
+  <meta property="og:type" content="website">
+  <title>Join the Chamber | Kampala Chamber of Commerce</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/small.css">
-  <link rel="stylesheet" href="css/larger.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="images/kampala-mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles/reset.css">
+  <link rel="stylesheet" href="styles/small.css?v=accessible-labels">
+  <link rel="stylesheet" href="styles/larger.css?v=accessible-labels">
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/footer.js" defer></script>
+  <script src="scripts/join.js?v=membership-summary" defer></script>
 </head>
 <body>
   <header class="site-header">
-    <div class="site-header__bar">
-      <a class="brand" href="index.html" aria-label="Kampala Chamber home">
-        <img src="images/favicon.png" alt="Kampala Chamber of Commerce crest" width="40" height="40">
-        <span class="brand__text">
-          <span class="brand__name">Kampala Chamber</span>
-          <span class="brand__place">of Commerce &middot; Uganda</span>
-        </span>
-      </a>
-
-      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="primary-nav">
-        <span class="nav-toggle__bars"></span>
-        <span class="visually-hidden">Menu</span>
-      </button>
-
-      <nav class="primary-nav" id="primary-nav">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="directory.html">Directory</a></li>
-          <li><a href="discover.html">Discover</a></li>
-          <li><a href="index.html#highlights">Highlights</a></li>
-          <li><a href="join.html" aria-current="page">Join</a></li>
-        </ul>
-      </nav>
-    </div>
+    <a class="brand" href="index.html" aria-label="Kampala Chamber of Commerce home">
+      <img src="images/kampala-mark.svg" alt="" width="48" height="48">
+      <span><strong>Kampala</strong><small>Chamber of Commerce</small></span>
+    </a>
+    <button class="menu-button" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="site-navigation"><span aria-hidden="true">☰</span></button>
+    <nav id="site-navigation" class="site-navigation" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="directory.html">Directory</a>
+      <a href="discover.html">Discover</a>
+      <a class="active" href="join.html" aria-current="page">Join</a>
+      <a href="events.html">Events</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </header>
 
-  <main class="chamber-page chamber-join">
-    <section class="page-intro">
-      <div class="page-intro__inner">
-        <p class="eyebrow">Join today</p>
-        <h1>Membership application</h1>
-        <p>Become a member of Kampala’s most connected business network and unlock new opportunities for visibility, partnerships, and growth.</p>
+  <main class="join-page">
+    <section class="page-intro" aria-labelledby="page-title">
+      <div>
+        <p class="eyebrow">Become a member</p>
+        <h1 id="page-title">Join the chamber.</h1>
       </div>
+      <p class="intro-copy">Add your voice to the businesses building a more connected Kansanga and raise the visibility of your brand locally.</p>
     </section>
 
-    <div class="join-layout">
-      <form id="membership-form" method="get" action="thankyou.html">
-        <div class="form-grid">
-          <label>
-            First Name
-            <input type="text" id="firstName" name="firstName" required autocomplete="given-name" title="First name" placeholder="First name">
-          </label>
-
-          <label>
-            Last Name
-            <input type="text" id="lastName" name="lastName" required autocomplete="family-name" title="Last name" placeholder="Last name">
-          </label>
-
-          <label>
-            Organizational Title
-            <input type="text" id="title" name="title" autocomplete="organization-title" pattern="[A-Za-z -]{7,}" title="Use letters, spaces, and hyphens only. Minimum 7 characters." placeholder="Operations Manager">
-          </label>
-
-          <label>
-            Email Address
-            <input type="email" id="email" name="email" required autocomplete="email" title="Email address" placeholder="name@example.com">
-          </label>
-
-          <label>
-            Mobile Phone
-            <input type="tel" id="phone" name="phone" required autocomplete="tel" title="Mobile phone number" placeholder="+256 700 000 000">
-          </label>
-
-          <label>
-            Business / Organization
-            <input type="text" id="organization" name="organization" required autocomplete="organization" title="Business or organization name" placeholder="Business name">
-          </label>
-
-          <label>
-            Membership Level
-            <select id="membership" name="membership" title="Membership level" required>
-              <option value="">Choose a level</option>
-              <option value="np">NP Membership (no fee)</option>
-              <option value="bronze">Bronze Membership</option>
-              <option value="silver">Silver Membership</option>
-              <option value="gold">Gold Membership</option>
-            </select>
-          </label>
-
-          <label>
-            Business Description
-            <textarea id="description" name="description" title="Business description" rows="5" placeholder="Tell us about your business and goals."></textarea>
-          </label>
-
-          <input type="hidden" id="timestamp" name="timestamp" value="">
-
-          <button type="submit" class="primary-cta submit-btn">Submit application</button>
-        </div>
-      </form>
-
-      <aside class="membership-panel" aria-label="Membership levels">
-        <div class="membership-card card-np">
-          <span class="membership-label">NP</span>
-          <h2>Non-Profit</h2>
-          <p class="membership-price">Free</p>
-          <a href="#modal-np" class="modal-trigger">Learn more</a>
+    <section class="join-layout" aria-label="Membership application details">
+      <div class="join-form-card">
+        <div class="card-header">
+          <p class="eyebrow">Membership form</p>
+          <h2>Tell us about your business.</h2>
         </div>
 
-        <div class="membership-card card-bronze">
-          <span class="membership-label">Bronze</span>
-          <h2>Bronze</h2>
-          <p class="membership-price">$150 / year</p>
-          <a href="#modal-bronze" class="modal-trigger">Learn more</a>
+        <form method="get" action="thankyou.html">
+          <div class="field-row">
+            <label><span>First name</span><input name="first-name" type="text" autocomplete="given-name" title="Enter your first name." required></label>
+          </div>
+
+          <div class="field-row">
+            <label><span>Last name</span><input name="last-name" type="text" autocomplete="family-name" title="Enter your last name." required></label>
+          </div>
+
+          <div class="field-row">
+            <label><span>Organization name</span><input name="organization-name" type="text" autocomplete="organization" title="Enter the full name of your organization." required></label>
+          </div>
+
+          <div class="field-row">
+            <label><span>Organization title</span><input name="title" type="text" autocomplete="organization-title" minlength="7" pattern="[\p{L}\p{N}\s\x2d]{7,}" title="Use at least 7 letters, numbers, spaces, or hyphens." required></label>
+          </div>
+
+          <div class="field-row">
+            <label><span>Email address</span><input name="email" type="email" autocomplete="email" placeholder="name@example.com" title="Enter a valid email address, such as name@example.com." required></label>
+          </div>
+
+          <div class="field-row">
+            <label><span>Mobile phone</span><input name="phone" type="tel" autocomplete="tel" title="Enter a mobile phone number where the chamber can reach you." required></label>
+          </div>
+
+          <div class="field-row">
+            <label><span>Application date</span><input id="application-date" name="application-date" type="date" required></label>
+          </div>
+
+          <div class="field-row">
+            <label><span>Organization description</span><textarea name="organization-description" rows="4" title="Describe your organization's products, services, or mission." required></textarea></label>
+          </div>
+
+          <fieldset class="membership-options">
+            <legend>Membership level</legend>
+
+            <div class="membership-option">
+              <label class="option-card">
+                <input type="radio" name="membership" value="np" checked>
+                <span class="option-copy">
+                  <span class="option-header"><strong>NP Membership</strong><em>$0 / year</em></span>
+                  <span>For non-profit organizations and community groups.</span>
+                </span>
+              </label>
+              <button class="detail-button" type="button" data-membership="np">View benefits</button>
+            </div>
+
+            <div class="membership-option">
+              <label class="option-card">
+                <input type="radio" name="membership" value="bronze">
+                <span class="option-copy">
+                  <span class="option-header"><strong>Bronze Membership</strong><em>$250 / year</em></span>
+                  <span>Perfect for new businesses growing a local customer base.</span>
+                </span>
+              </label>
+              <button class="detail-button" type="button" data-membership="bronze">View benefits</button>
+            </div>
+
+            <div class="membership-option">
+              <label class="option-card">
+                <input type="radio" name="membership" value="silver">
+                <span class="option-copy">
+                  <span class="option-header"><strong>Silver Membership</strong><em>$500 / year</em></span>
+                  <span>For established businesses wanting more visibility and events.</span>
+                </span>
+              </label>
+              <button class="detail-button" type="button" data-membership="silver">View benefits</button>
+            </div>
+
+            <div class="membership-option">
+              <label class="option-card">
+                <input type="radio" name="membership" value="gold">
+                <span class="option-copy">
+                  <span class="option-header"><strong>Gold Membership</strong><em>$1,000 / year</em></span>
+                  <span>Top-tier visibility with premium networking and spotlight access.</span>
+                </span>
+              </label>
+              <button class="detail-button" type="button" data-membership="gold">View benefits</button>
+            </div>
+          </fieldset>
+
+          <input id="timestamp" name="timestamp" type="hidden">
+
+          <div class="form-actions">
+            <button class="button-link" type="submit">Apply now</button>
+          </div>
+        </form>
+      </div>
+
+      <aside class="join-sidebar" aria-label="Membership benefits and pricing overview">
+        <div class="benefits-card">
+          <p class="eyebrow">Why join</p>
+          <h2>Member benefits.</h2>
+          <ul class="benefit-list">
+            <li>Featured placement in the chamber directory</li>
+            <li>Invitations to member breakfasts and monthly meetups</li>
+            <li>Access to local market insights and community updates</li>
+            <li>Networking opportunities with nearby businesses and leaders</li>
+          </ul>
         </div>
 
-        <div class="membership-card card-silver">
-          <span class="membership-label">Silver</span>
-          <h2>Silver</h2>
-          <p class="membership-price">$300 / year</p>
-          <a href="#modal-silver" class="modal-trigger">Learn more</a>
-        </div>
-
-        <div class="membership-card card-gold">
-          <span class="membership-label">Gold</span>
-          <h2>Gold</h2>
-          <p class="membership-price">$500 / year</p>
-          <a href="#modal-gold" class="modal-trigger">Learn more</a>
+        <div class="price-card" aria-live="polite">
+          <p class="eyebrow">Selected plan</p>
+          <h3 id="selected-plan">NP Membership</h3>
+          <p id="selected-price" class="selected-price">$0 / year</p>
+          <ul id="selected-benefits" class="benefit-list" aria-label="Benefits included with selected membership"></ul>
         </div>
       </aside>
-    </div>
+    </section>
+
+    <dialog id="membership-dialog" class="membership-dialog" aria-labelledby="dialog-title">
+      <div class="dialog-header">
+        <div>
+          <p class="eyebrow">Membership details</p>
+          <h2 id="dialog-title">Membership benefits</h2>
+        </div>
+        <button class="dialog-close" type="button" aria-label="Close membership details">×</button>
+      </div>
+      <p id="dialog-price" class="selected-price"></p>
+      <ul id="dialog-benefits" class="benefit-list"></ul>
+    </dialog>
   </main>
 
-  <div class="modal" id="modal-np" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-np-title">
-    <div class="modal-content">
-      <button type="button" class="modal-close" aria-label="Close membership details">&times;</button>
-      <h3 id="modal-np-title">NP Membership</h3>
-      <p>Perfect for nonprofit organizations and community groups that want visibility, networking, and access to member events without monthly fees.</p>
-      <ul>
-        <li>Community networking invitations</li>
-        <li>Directory listing</li>
-        <li>Access to chamber events</li>
-      </ul>
+  <footer class="site-footer" id="contact">
+    <div>
+      <a class="footer-brand" href="index.html"><img src="images/kampala-mark.svg" alt="" width="34" height="34"><span>Kampala Chamber of Commerce</span></a>
+      <p class="footer-address">Kansanga–Gaba Road · Kampala, Uganda<br><a href="tel:0701986835">0701986835</a><br><a href="mailto:kampalachamber@gmail.com">kampalachamber@gmail.com</a></p>
     </div>
-  </div>
-
-  <div class="modal" id="modal-bronze" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-bronze-title">
-    <div class="modal-content">
-      <button type="button" class="modal-close" aria-label="Close membership details">&times;</button>
-      <h3 id="modal-bronze-title">Bronze Membership</h3>
-      <p>Ideal for new businesses seeking greater local visibility and early exposure in the chamber network.</p>
-      <ul>
-        <li>Community event access</li>
-        <li>Business profile in the directory</li>
-        <li>Quarterly networking invitation</li>
-      </ul>
+    <div class="footer-social" role="group" aria-label="Social media links">
+      <a href="https://www.facebook.com/" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M13.5 21v-8h2.7l.4-3h-3.1V7.2c0-.9.3-1.5 1.6-1.5H16V2.9c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.5v3h2.3v8h3.7Z"/></svg>
+      </a>
+      <a href="https://www.linkedin.com/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6.9 8.8A1.8 1.8 0 1 1 6.9 5a1.8 1.8 0 0 1 0 3.8ZM5.2 9.8h3.4V18H5.2V9.8Zm5.7 0h3.2v1.1h.1c.4-.9 1.5-1.8 3.2-1.8 3.4 0 4 2.2 4 5.1V18h-3.4v-16.8h3.4v1.1c.8-1.4 2.5-2.8 5.2-2.8 5.6 0 6.6 3.7 6.6 8.4V18h-3.4v-16.8h3.4v1.1c.8-1.4 2.7-3 5.8-3 3.7 0 6.4 2.4 6.4 7.3V18h-3.4v-16.8h3.4v1.1c.8-1.4 2.5-2.8 5.2-2.8 5.6 0 6.6 3.7 6.6 8.4V18h-3.4v-16.8h3.4v1.1c.8-1.4 2.7-3 5.8-3 3.7 0 6.4 2.4 6.4 7.3V18H36.6v-9.4c0-3-1.4-4.8-4-4.8-2.1 0-3.4 1.1-3.9 2.2h-.1v-1.9h-3.3v12.2Z" transform="translate(-5 -2) scale(.85)"/></svg>
+      </a>
+      <a href="https://www.instagram.com/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3.2A4.8 4.8 0 1 1 7.2 12 4.8 4.8 0 0 1 12 7.2Zm0 2A2.8 2.8 0 1 0 14.8 12 2.8 2.8 0 0 0 12 9.2Zm5-3.2a1.2 1.2 0 1 1-1.2 1.2A1.2 1.2 0 0 1 17 6Z"/></svg>
+      </a>
     </div>
-  </div>
-
-  <div class="modal" id="modal-silver" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-silver-title">
-    <div class="modal-content">
-      <button type="button" class="modal-close" aria-label="Close membership details">&times;</button>
-      <h3 id="modal-silver-title">Silver Membership</h3>
-      <p>Recommended for growing businesses ready to increase brand visibility and access stronger market connections.</p>
-      <ul>
-        <li>Featured directory placement</li>
-        <li>Complimentary event passes</li>
-        <li>Member spotlight opportunities</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="modal" id="modal-gold" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-gold-title">
-    <div class="modal-content">
-      <button type="button" class="modal-close" aria-label="Close membership details">&times;</button>
-      <h3 id="modal-gold-title">Gold Membership</h3>
-      <p>For established businesses that want premium visibility, leadership opportunities, and chamber influence.</p>
-      <ul>
-        <li>Featured spotlight placement</li>
-        <li>Priority event access</li>
-        <li>VIP networking and ambassador opportunities</li>
-      </ul>
-    </div>
-  </div>
-
-  <footer class="site-footer">
-    <div class="site-footer__inner">
-      <div>
-        <h2>Kampala Chamber of Commerce</h2>
-        <address>
-          17 Kampala Road<br>
-          Kampala, Uganda<br>
-          <a href="tel:+256701986835">+256 701 986 835</a><br>
-          <a href="mailto:fredrickoketcho5@gmail.com">fredrickoketcho5@gmail.com</a>
-        </address>
-      </div>
-
-      <div>
-        <h2>Connect</h2>
-        <div class="social-links">
-          <a href="https://github.com/FredrickOketcho/-wdd231" target="_blank" rel="noopener" aria-label="GitHub">
-            <svg viewBox="0 0 24 24"><path d="M12 .5A12 12 0 0 0 8.2 23.8c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.4-4-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.8.1-.8.1-.8 1.2.1 1.9 1.3 1.9 1.3 1.1 1.9 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.8 0-1.3.5-2.4 1.3-3.2-.1-.3-.6-1.5.1-3.2 0 0 1.1-.4 3.4 1.2A11.5 11.5 0 0 1 12 6.8c1.1 0 2.3.2 3.3.5 2.3-1.6 3.4-1.2 3.4-1.2.7 1.7.2 2.9.1 3.2.8.8 1.3 1.9 1.3 3.2 0 4.5-2.8 5.5-5.5 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z"/></svg>
-          </a>
-          <a href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn">
-            <svg viewBox="0 0 24 24"><path d="M6.94 8.5A1.56 1.56 0 1 1 6.9 5.4a1.56 1.56 0 0 1 .04 3.1ZM5.5 9.8h2.8V19H5.5V9.8Zm4.7 0h2.7v1.3h.1c.4-.7 1.3-1.5 2.8-1.5 3 0 3.5 2 3.5 4.5V19h-2.8v-17.6c0-1.1-.1-2.5-1.5-2.5-1.5 0-1.7 1.2-1.7 2.5V19h-2.8V9.8Z"/></svg>
-          </a>
-          <a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube">
-            <svg viewBox="0 0 24 24"><path d="M23.5 7.2a3 3 0 0 0-2.1-2.1C19.4 4.7 12 4.7 12 4.7s-7.4 0-9.4.4A3 3 0 0 0 .5 7.2 31.5 31.5 0 0 0 0 12a31.5 31.5 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c2 .4 9.4.4 9.4.4s7.4 0 9.4-.4a3 3 0 0 0 2.1-2.1A31.5 31.5 0 0 0 24 12a31.5 31.5 0 0 0-.5-4.8ZM9.8 15.5v-7l6.3 3.5-6.3 3.5Z"/></svg>
-          </a>
-        </div>
-      </div>
-
-      <div>
-        <h2>Quick links</h2>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="directory.html">Directory</a></li>
-          <li><a href="join.html">Join</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="site-footer__bottom">
-      <p>&copy; <span id="current-year"></span> Kampala Chamber of Commerce</p>
-      <p>Last updated: <span id="last-modified"></span></p>
+    <div class="footer-meta">
+      <p>&copy; <span id="currentyear"></span> Fredrick Oketcho | WDD 231</p>
+      <p id="lastModified">Last modified: </p>
     </div>
   </footer>
 
-  <script src="js/join.js" defer></script>
 </body>
 </html>
